@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&display=swap');
+/*Gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hepta Slab';
+}
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*Cabeçalho*/
+header{
+    background-color: black;
+    color: black;
+    font-family: Arial;
+    padding-bottom: 100px;
+}
+.logo{
+    display: flex;
+}
+.logo h1{
+    margin-top: 50px;
+    color: white;
+}
+span{
+    font-size: 25px;
+}
+/*Carrinho*/
+.cart-area{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    height: 50px;
+    cursor: pointer;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fora da tela por padrão */
+    width: 500px;
+    height: 100%;
+    background-color: #ffffff;
+    color: black;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+.cart.open {
+    right: 0; /* Mostra o carrinho */
+}
+.cart .area {
+    padding: 20px;
+}
+.cart .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.area span{
+    cursor: pointer;
+}
+.area button{
+    border: none;
+    cursor: pointer;
+}
+.produtos{
+    display: block;
+    color: black;
+}
+.produtos-add{
+    display: flex;
+    justify-content: space-between;
+}
+.produtos-add span{
+    font-size: 20px;
+}
+.subtotal span{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Body*/
+.title{
+    font-size: 23px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.title h1{
+    font-size: 35px;
+    width: 260px;
+    border-bottom: 3px solid rgb(255, 145, 0);
+}
+.prod{
+    padding-top: 50px;
+    padding-bottom: 80px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produtos-container, .produtos-container-gourmet{
+    font-family: "Protest Revolution";
+    padding-top: 40px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 200px;
+    row-gap: 50px;
+}
+.produtos-container .nome-prod, .produtos-container-gourmet .nome-prod{
+    font-size: 25px;
+}
+.prod-area{
+    padding-bottom: 35px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 30px;
+}
+.prod-area:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.459);
+}
+.desc{
+    margin-top: 500px;
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+}
+/*Modal*/
+.modal{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 10;
+}
+.modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+.modalBody{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    width: 1024px;
+    height: 470px;
+    border-radius: 15px;
+    display: flex;
+}
+.adicionar{
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(0, 187, 0);
+
+}
+.cancelar{
+    display: inline-block;
+    margin-left: 100px;
+    cursor: pointer;
+    border-bottom: 3px solid red;
+}
+.finalizar{
+    width: 200px;
+    background-color:rgb(0, 187, 0);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btn{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.info h1{
+    margin-top: 50px;
+}
+.info-desc{
+    margin-top: 20px;
+}
+.info-price{
+    margin-top: 130px;
+    padding-bottom: 40px;
+}
+.price-area{
+    display: flex;
+}
+.qt-area{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.mais{
+    margin-left: 5px;
+}
+.menos{
+    margin-right: 5px;
+}
+.qt-area button{
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.qt-area .qt{
+    padding: 0 10px;
+}
+/*Rodapé*/
+footer{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+footer .container{
+    padding-top: 35px;
+}
